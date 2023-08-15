@@ -43,7 +43,8 @@ body {
   background: white;
   color: black;
   width: 50vw;
-  height: 50vw;
+  height: 50vh;
+  max-width: 600px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -101,17 +102,42 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 1100px;
 }
 .chat header {
   background: crimson;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   border-radius: 10px 10px 0 0;
 }
 
+/* Mesajlar alanı */
 .chat main {
+  color: black;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+}
+
+.msg-user {
+  align-self: flex-end;
+  border-radius: 10px;
+  background: #646cff;
+  color: white;
+  padding: 4px;
+  border-radius: 5px 5px 0 5px;
+}
+.msg-other {
+}
+
+.msg-other span:nth-child(1) {
+  font-weight: bold;
+}
+.msg-other {
 }
 
 .chat form {
@@ -128,6 +154,10 @@ body {
   border-radius: 10px;
   padding: 5px 10px;
   font-size: 17px;
+}
+
+.chat header .user {
+  font-weight: bold;
 }
 
 .chat header a,

@@ -33,8 +33,6 @@ function App() {
     setRoom(e.target[0].value);
   };
 
-  console.log('sleaml', room);
-
   /* kullanıcı yoksa giriş ekranını  gösterir */
   if (!isAuth) {
     return (
@@ -48,7 +46,7 @@ function App() {
   return (
     <div className="container">
       {room ? (
-        <Chat room={room} />
+        <Chat room={room} setRoom={setRoom} />
       ) : (
         <form onSubmit={handleSubmit} className="room-container">
           <h1>Chat Odası</h1>
